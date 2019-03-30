@@ -858,8 +858,8 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10308, guid: 0000000000000000f000000000000000, type: 0}
-  - {fileID: 0}
+  - {fileID: 2100000, guid: d6fdd6792e986564c818d409ceb7027f, type: 2}
+  - {fileID: 2100000, guid: d6fdd6792e986564c818d409ceb7027f, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -879,7 +879,7 @@ ParticleSystemRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_RenderMode: 0
+  m_RenderMode: 4
   m_SortMode: 0
   m_MinParticleSize: 0
   m_MaxParticleSize: 0.5
@@ -897,7 +897,7 @@ ParticleSystemRenderer:
   m_ApplyActiveColorSpace: 1
   m_AllowRoll: 1
   m_VertexStreams: 00010304
-  m_Mesh: {fileID: 0}
+  m_Mesh: {fileID: 4300000, guid: df47713f76667d04196fa3a9ed5b5b49, type: 3}
   m_Mesh1: {fileID: 0}
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
@@ -916,9 +916,9 @@ ParticleSystem:
   cullingMode: 0
   ringBufferMode: 0
   ringBufferLoopRange: {x: 0, y: 1}
-  looping: 1
+  looping: 0
   prewarm: 0
-  playOnAwake: 1
+  playOnAwake: 0
   useUnscaledTime: 0
   autoRandomSeed: 1
   useRigidbodyForVelocity: 1
@@ -1312,9 +1312,9 @@ ParticleSystem:
         m_RotationOrder: 4
     startRotationX:
       serializedVersion: 2
-      minMaxState: 0
-      scalar: 0
-      minScalar: 0
+      minMaxState: 3
+      scalar: -6.283185
+      minScalar: 6.283185
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -1365,9 +1365,9 @@ ParticleSystem:
         m_RotationOrder: 4
     startRotationY:
       serializedVersion: 2
-      minMaxState: 0
-      scalar: 0
-      minScalar: 0
+      minMaxState: 3
+      scalar: -6.283185
+      minScalar: 6.283185
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -1418,9 +1418,9 @@ ParticleSystem:
         m_RotationOrder: 4
     startRotation:
       serializedVersion: 2
-      minMaxState: 0
-      scalar: 0
-      minScalar: 0
+      minMaxState: 3
+      scalar: -6.283185
+      minScalar: 6.283185
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -1472,7 +1472,7 @@ ParticleSystem:
     randomizeRotationDirection: 0
     maxNumParticles: 1000
     size3D: 0
-    rotation3D: 0
+    rotation3D: 1
     gravityModifier:
       serializedVersion: 2
       minMaxState: 0
@@ -5646,8 +5646,9 @@ MonoBehaviour:
     type: 3}
   SpawnChance: 0.1
   ReactorMaterial: {fileID: 2100000, guid: 4ecb9a97c7ea7234992c73d74ebe1ec5, type: 2}
-  EmissiveReactionColor: {r: 0.015352439, g: 0.07843093, b: 0.14150941, a: 0}
+  EmissiveReactionColor: {r: 0.035555363, g: 0.23947579, b: 0.4433962, a: 0}
   ReactionLight: {fileID: 1437412412}
+  SpawnInset: 0.2
 --- !u!108 &1437412412
 Light:
   m_ObjectHideFlags: 0
@@ -5681,7 +5682,7 @@ Light:
   m_Lightmapping: 4
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
-  m_BounceIntensity: 1
+  m_BounceIntensity: 1.8
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
   m_ShadowRadius: 0
@@ -10689,7 +10690,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Spray: {fileID: 1720706783}
-  CrystalParticles: {fileID: 1431863521}
+  SpawnCrystals: 1
+  CrystalParticleSystem: {fileID: 1431863521}
+  CrystalSize: 0.1
 --- !u!1 &2065955097
 GameObject:
   m_ObjectHideFlags: 0
@@ -10917,7 +10920,7 @@ Transform:
   m_GameObject: {fileID: 2066155674}
   m_LocalRotation: {x: 0.01710779, y: -0.27752435, z: -0.12500983, w: 0.95239705}
   m_LocalPosition: {x: -0.9741955, y: -2.8591695, z: 4.291792}
-  m_LocalScale: {x: 2.060998, y: 2.060998, z: 2.060998}
+  m_LocalScale: {x: 2.060998, y: 2.060998, z: 4.32521}
   m_Children: []
   m_Father: {fileID: 1077323489}
   m_RootOrder: 3
