@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class ExhaustSystem : MonoBehaviour
 {
-    public ParticleSystem part;
+    public ParticleSystem Spray;
     public List<ParticleCollisionEvent> collisionEvents;
+    public ParticleSystem CrystalParticles;
 
     void Start()
     {
-        part = GetComponent<ParticleSystem>();
         collisionEvents = new List<ParticleCollisionEvent>();
     }
 
@@ -17,7 +17,7 @@ public class ExhaustSystem : MonoBehaviour
     {
         ParticleReactor reactingObject = other.GetComponent<ParticleReactor>();
         if (reactingObject != null) { 
-            int numCollisionEvents = part.GetCollisionEvents(other, collisionEvents);
+            int numCollisionEvents = Spray.GetCollisionEvents(other, collisionEvents);
             if (numCollisionEvents > 0)
             {
                 reactingObject.OnCollision(numCollisionEvents, collisionEvents[0].intersection, collisionEvents[0].normal);
