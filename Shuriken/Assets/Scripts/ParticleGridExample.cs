@@ -29,7 +29,7 @@ public class ParticleGridExample : MonoBehaviour
     {
         for(int i = 0; i < particles.Length; i++)
         {
-            particles[i].startSize = ParticleSize;// * Random.Range(0.5f, 1.5f);
+            particles[i].startSize = ParticleSize * Random.Range(0.5f, 1.5f);
             particles[i].position = new Vector3(particles[i].position.x, 
                                                 particles[i].position.y, 
                                                 Mathf.Sin(Time.time + (particles[i].position.x + particles[i].position.y) / 10f));
